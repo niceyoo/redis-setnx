@@ -1,0 +1,27 @@
+server:
+  port: 6668
+  servlet:
+    context-path: /
+
+spring:
+  redis:
+    host: 127.0.0.1
+    password:
+    # 数据库索引 默认0
+    database: 0
+    port: 6379
+    # 超时时间 Duration类型 3秒
+    timeout: 3S
+
+# 日志
+logging:
+  # 输出级别
+  level:
+    root: info
+  file:
+    # 指定路径
+    path: redis-logs
+    # 最大保存天数
+    max-history: 7
+    # 每个文件最大大小
+    max-size: 5MB
